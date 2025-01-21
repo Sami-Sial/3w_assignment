@@ -9,7 +9,7 @@ const cors = require("cors");
 
 // Data Parsing
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://3w-assignment-y7y4-frontend.vercel.app');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     next();
 });
 app.use(express.urlencoded({ extended: true }));
