@@ -4,7 +4,7 @@ import axios from "axios";
 
 export const signup = createAsyncThunk("signup", async (formData) => {
     try {
-        const { data } = await axios.post("/api/v1/register",
+        const { data } = await axios.post("https://3w-assignment-vert.vercel.app/api/v1/register",
             { ...formData },
             { headers: { "Content-Type": "multipart/form-data" } }
         );
@@ -19,7 +19,7 @@ export const signup = createAsyncThunk("signup", async (formData) => {
 
 export const login = createAsyncThunk("login", async (formData) => {
     try {
-        const { data } = await axios.post("/api/v1/login",
+        const { data } = await axios.post("https://3w-assignment-vert.vercel.app/api/v1/login",
             { ...formData },
             { headers: { "Content-Type": "application/json" } }
         );
@@ -33,7 +33,7 @@ export const login = createAsyncThunk("login", async (formData) => {
 
 export const loadUser = createAsyncThunk("loadUser", async () => {
     try {
-        const { data } = await axios.get("/api/v1/me");
+        const { data } = await axios.get("https://3w-assignment-vert.vercel.app/api/v1/me");
         
         return data;
     } catch (error) {
