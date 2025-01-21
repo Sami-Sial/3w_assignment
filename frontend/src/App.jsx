@@ -9,10 +9,10 @@ const LoginPage = lazy(() => import("./components/Login.jsx"));
 const DashboardPage = lazy(() => import("./components/Dashboard.jsx"));
 
 const router = createBrowserRouter([
-  { path: "/", element: <HomePage /> },
-  { path: "/signup", element: <SignupPage /> },
-  { path: "/login", element: <LoginPage /> },
-  { path: "/dashboard", element: <DashboardPage /> },
+  { path: "https://3w-assignment-y7y4-frontend.vercel.app/", element: <HomePage /> },
+  { path: "https://3w-assignment-y7y4-frontend.vercel.app/signup", element: <SignupPage /> },
+  { path: "https://3w-assignment-y7y4-frontend.vercel.app/login", element: <LoginPage /> },
+  { path: "https://3w-assignment-y7y4-frontend.vercel.app/dashboard", element: <DashboardPage /> },
 ]);
 
 function App() {
