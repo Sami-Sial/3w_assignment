@@ -8,7 +8,10 @@ const cors = require("cors");
 
 
 // Data Parsing
-app.use(cors());
+app.use(cors({
+    origin: "https://3w-assignment-y7y4-frontend.vercel.app/",
+    credentials: true
+}));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
