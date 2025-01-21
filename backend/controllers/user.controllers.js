@@ -3,23 +3,12 @@ const ErrorHandler = require("../utils/ErrorHandler");
 const AsyncErrorHandler = require("../utils/AsyncErrorHandler");
 const sendToken = require("../utils/JwtToken");
 
-// checking is display name is unique
-module.exports.isDisplayNameUnique = AsyncErrorHandler(async (req, res, next) => {
-  let { displayName } = req.body;
-  console.log(displayName)
-  let isUserExists = await User.findOne({ displayName });
-  if (isUserExists) {
-    return next(new ErrorHandler(204, "User with this name already exists"));
-  }
-  res.status(200).json({
-    message: "Avaialbe"
-  })
-});
-
 // Register a User
 module.exports.registerUser = AsyncErrorHandler(async (req, res, next) => {
   let { name, displayName, password } = req.body;
-  console.log(req.files)
+  if (!name || !displayName || !password) {
+    return next(new ErrorHandler(400, "All Fields are required"));
+  }
 
   let newUser = new User({
     name,
