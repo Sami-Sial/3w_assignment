@@ -3,8 +3,8 @@ import axios from "axios";
 
 export const getAdminUsers = createAsyncThunk("getAdminUsers", async () => {
     try {
-        const {data}  = await axios.get("https://3w-assignment-vert.vercel.app/api/v1/admin/users");
-        console.log(data);
+        const {data}  = await axios.get("https://3w-assignment-one.vercel.app/api/v1/admin/users");
+        console.log(data);h
         return data;
     } catch (error) {
         console.log(error);
