@@ -5,10 +5,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   server: {
     proxy: {
-      "/api/v1/register": "https://3w-assignment-vert.vercel.app",
-      "/api/v1/admin/users":"https://3w-assignment-vert.vercel.app",
-      "/api/v1/login": "https://3w-assignment-vert.vercel.app",
-      "/api/v1/me": "https://3w-assignment-vert.vercel.app",
+      "/api/v1/register": "",
+      "/api/v1/admin/users":"",
+      "/api/v1/login": "",
+      "/api/v1/me": "",
     }
   },
   plugins: [react()],

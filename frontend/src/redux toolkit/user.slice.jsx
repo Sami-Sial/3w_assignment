@@ -19,7 +19,7 @@ export const signup = createAsyncThunk("signup", async (formData) => {
 
 export const login = createAsyncThunk("login", async (formData) => {
     try {
-        const { data } = await axios.post("https://3w-assignment-one.vercel.app/https://3w-assignment-vert.vercel.app/api/v1/login",
+        const { data } = await axios.post("https://3w-assignment-one.vercel.app/api/v1/login",
             { ...formData },
             { headers: { "Content-Type": "application/json" } }
         );
