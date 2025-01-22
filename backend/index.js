@@ -4,7 +4,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const app = express();
-const cors = require("cors");
+const cors = require("cors")
 
 
 // Data Parsing
